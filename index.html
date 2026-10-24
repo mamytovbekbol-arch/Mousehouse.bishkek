@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mouse House — антикино в Бишкеке</title>
+<meta name="description" content="Антикино «Маус Хаус» в Бишкеке: приватные кабинки до 20 человек, фильмы, караоке, романтическое оформление. Работаем 24/7.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--bg:#0b0414;--bg2:#150826;--ink:#f4ecff;--mute:#a897c4;--violet:#b45cff;--pink:#ff3fa4;--line:rgba(180,92,255,.28);--c:var(--violet);
+--head:'Unbounded','Arial Black',sans-serif;--body:'Manrope',system-ui,sans-serif;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--body);overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--pink);outline-offset:3px}
+.wrap{width:min(1120px,100% - 40px);margin-inline:auto}
+h1,h2,h3{font-family:var(--head);font-weight:800;line-height:1.1;margin:0}
+h2{font-size:clamp(26px,5vw,44px);margin-bottom:14px}
+section{padding:88px 0}
+.lead{color:var(--mute);max-width:56ch;margin:0 0 40px}
+/* nav */
+nav{position:fixed;inset:0 0 auto;z-index:20;padding-top:env(safe-area-inset-top,0px);background:rgba(11,4,20,.78);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:var(--head);font-weight:800;text-decoration:none;font-size:15px;color:var(--ink);text-shadow:0 0 12px var(--violet)}
+nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0;font-size:15px}
+nav ul a{text-decoration:none;color:var(--mute);transition:color .2s}
+nav ul a:hover{color:var(--ink)}
+.btn{display:inline-block;border:0;cursor:pointer;font:700 16px var(--body);text-decoration:none;color:#fff;padding:14px 26px;border-radius:999px;background:linear-gradient(120deg,var(--violet),var(--pink));box-shadow:0 0 26px rgba(255,63,164,.35);transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 0 38px rgba(255,63,164,.55)}
+.btn.ghost{background:none;border:1px solid var(--line);box-shadow:none}
+nav .btn{padding:9px 18px;font-size:14px}
+@media(max-width:760px){nav ul{display:none}}
+/* hero */
+.hero{min-height:100svh;display:grid;align-items:center;padding:120px 0 70px;background:radial-gradient(60% 50% at 70% 30%,rgba(180,92,255,.28),transparent 70%),radial-gradient(40% 40% at 10% 90%,rgba(255,63,164,.2),transparent 70%)}
+.neon{font-family:var(--head);font-weight:800;font-size:clamp(46px,12vw,138px);line-height:.95;margin:0 0 26px;color:#fff;text-shadow:0 0 6px #fff,0 0 22px var(--violet),0 0 54px var(--violet),0 0 90px var(--pink);animation:flick 1.6s .3s both}
+.neon span{display:block;color:#ffd9f1;text-shadow:0 0 6px #fff,0 0 22px var(--pink),0 0 54px var(--pink)}
+@keyframes flick{0%,18%,22%,60%{opacity:.15}20%,24%,62%,100%{opacity:1}}
+.hero p{font-size:clamp(18px,2.4vw,23px);max-width:34ch;margin:0 0 34px;color:#e2d4f7}
+.cta{display:flex;flex-wrap:wrap;gap:14px}
+.facts{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:54px;color:var(--mute);font-size:15px}
+.facts b{color:var(--ink)}
+/* cabins */
+.cabins{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.cab{--c:var(--violet);position:relative;border:1px solid color-mix(in srgb,var(--c) 55%,transparent);border-radius:22px;padding:30px 24px 26px;background:linear-gradient(170deg,color-mix(in srgb,var(--c) 22%,var(--bg2)),var(--bg2) 70%);display:flex;flex-direction:column;min-height:330px;overflow:hidden;transition:box-shadow .3s}
+.cab:hover{box-shadow:0 0 40px color-mix(in srgb,var(--c) 45%,transparent)}
+.cab::after{content:"";position:absolute;right:-50px;top:-50px;width:150px;height:150px;border-radius:50%;background:var(--c);filter:blur(70px);opacity:.5}
+.cab .ico{font-size:40px;line-height:1;margin-bottom:22px;filter:drop-shadow(0 0 12px var(--c))}
+.cab h3{font-size:25px;color:var(--c);text-shadow:0 0 18px color-mix(in srgb,var(--c) 70%,transparent);margin-bottom:10px}
+.cab p{margin:0 0 18px;color:#d9c9ef;font-size:15.5px}
+.cab small{color:var(--mute);margin-top:auto;display:block;margin-bottom:18px}
+.cab .btn{background:var(--c);color:#12041f;box-shadow:none;text-align:center;padding:12px}
+.sakura{--c:#ff8fc7}.kiss{--c:#ff3b4e}.skala{--c:#59c7ff}.mouse{--c:#b45cff}
+/* perks */
+.perks{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:34px 28px}
+.perk h3{font-size:18px;margin-bottom:8px}
+.perk p{margin:0;color:var(--mute);font-size:15.5px}
+.perk i{font-style:normal;font-size:30px;display:block;margin-bottom:12px}
+/* promo */
+.promo{background:linear-gradient(135deg,#3a0d1c,#1a0630 60%);border:1px solid rgba(255,59,78,.4);border-radius:26px;padding:clamp(28px,5vw,56px);display:grid;gap:26px;grid-template-columns:1.3fr 1fr;align-items:center;box-shadow:0 0 60px rgba(255,59,78,.15)}
+.promo h2{margin-bottom:14px}
+.promo p{margin:0 0 10px;color:#f0d6dc}
+.gift{font-family:var(--head);font-weight:800;text-align:center;font-size:clamp(40px,7vw,76px);line-height:1;color:#fff;text-shadow:0 0 30px #ff3b4e}
+.gift small{display:block;font:500 15px var(--body);color:#f0d6dc;margin-top:12px;text-shadow:none}
+@media(max-width:760px){.promo{grid-template-columns:1fr}}
+/* booking */
+.book{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+@media(max-width:860px){.book{grid-template-columns:1fr}}
+form{display:grid;gap:16px;background:var(--bg2);border:1px solid var(--line);border-radius:22px;padding:28px}
+label{display:grid;gap:6px;font-size:14px;color:var(--mute);font-weight:500}
+input,select,textarea{font:500 16px var(--body);color:var(--ink);background:#0b0414;border:1px solid var(--line);border-radius:12px;padding:13px 14px;width:100%}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--pink);box-shadow:0 0 0 3px rgba(255,63,164,.2)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.hint{font-size:13.5px;color:var(--mute);margin:0}
+.contact a{display:block;text-decoration:none;font-family:var(--head);font-weight:600;font-size:clamp(20px,3.4vw,30px);margin:6px 0 4px}
+.contact dl{margin:28px 0 0;display:grid;gap:18px}
+.contact dt{font-weight:700;margin-bottom:2px}
+.contact dd{margin:0;color:var(--mute)}
+.contact .btn{margin-top:26px}
+/* faq */
+details{border-bottom:1px solid var(--line);padding:18px 0}
+summary{cursor:pointer;font-weight:700;font-size:18px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::after{content:"+";color:var(--pink);font-size:26px;line-height:1;transition:transform .25s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin:12px 0 0;color:var(--mute);max-width:62ch}
+footer{border-top:1px solid var(--line);padding:34px 0;color:var(--mute);font-size:14.5px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#top">Mouse House</a>
+    <ul>
+      <li><a href="#cabins">Кабинки</a></li>
+      <li><a href="#about">О нас</a></li>
+      <li><a href="#promo">Акции</a></li>
+      <li><a href="#faq">Вопросы</a></li>
+      <li><a href="#contacts">Контакты</a></li>
+    </ul>
+    <a class="btn" href="#book">Забронировать</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <h1 class="neon">Mouse<span>House</span></h1>
+    <p>Антикино в Бишкеке. Закрытая кабинка, ваш фильм, ваша компания — до 20 человек.</p>
+    <div class="cta">
+      <a class="btn" href="#book">Забронировать кабинку</a>
+      <a class="btn ghost" href="#cabins">Выбрать кабинку</a>
+    </div>
+    <div class="facts">
+      <span><b>24/7</b> без выходных</span>
+      <span><b>до 20</b> человек в кабинке</span>
+      <span><b>Анкара 351</b> (Горького 59)</span>
+    </div>
+  </div>
+</header>
+
+<section id="cabins">
+  <div class="wrap">
+    <h2>Четыре кабинки — четыре настроения</h2>
+    <p class="lead">Нажмите «Выбрать» — кабинка подставится в форму бронирования.</p>
+    <div class="cabins">
+      <article class="cab sakura">
+        <div class="ico">🌸</div>
+        <h3>Sakura</h3>
+        <p>Нежное розовое свечение и цветочное оформление. Для свидания, дня рождения и тихого вечера вдвоём.</p>
+        <small>До 20 человек</small>
+        <a class="btn" href="#book" data-cab="Sakura">Выбрать Sakura</a>
+      </article>
+      <article class="cab kiss">
+        <div class="ico">💋</div>
+        <h3>Kiss</h3>
+        <p>Красный свет, романтичная атмосфера. Для пар, которым нужен вечер без посторонних.</p>
+        <small>До 20 человек</small>
+        <a class="btn" href="#book" data-cab="Kiss">Выбрать Kiss</a>
+      </article>
+      <article class="cab skala">
+        <div class="ico">⛰️</div>
+        <h3>Skala</h3>
+        <p>Холодный синий свет и фактура камня. Подойдёт для компании друзей, игр и марафона фильмов.</p>
+        <small>До 20 человек</small>
+        <a class="btn" href="#book" data-cab="Skala">Выбрать Skala</a>
+      </article>
+      <article class="cab mouse">
+        <div class="ico">🐭</div>
+        <h3>Mouse</h3>
+        <p>Фирменная кабинка с неоновым логотипом заведения. Для тех, кто хочет почувствовать дух Mouse House.</p>
+        <small>До 20 человек</small>
+        <a class="btn" href="#book" data-cab="Mouse">Выбрать Mouse</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="about" style="background:var(--bg2)">
+  <div class="wrap">
+    <h2>Что такое антикино</h2>
+    <p class="lead">Это не зал с рядами и не кино по расписанию. Вы арендуете кабинку на нужное количество часов и сами решаете, что смотреть, петь и праздновать.</p>
+    <div class="perks">
+      <div class="perk"><i>🎬</i><h3>Любые фильмы</h3><p>Смотрите то, что хотите: новинки, классику, сериалы.</p></div>
+      <div class="perk"><i>🎤</i><h3>Караоке</h3><p>Поём вместе с друзьями. Проводим вечера с живыми трансляциями и тематическими концертами.</p></div>
+      <div class="perk"><i>🌹</i><h3>Романтическое оформление</h3><p>Цветы, свет и декор для свиданий, предложений и годовщин.</p></div>
+      <div class="perk"><i>🔒</i><h3>Приватность</h3><p>Отдельная кабинка только для вашей компании.</p></div>
+      <div class="perk"><i>🕛</i><h3>Круглосуточно</h3><p>Работаем 24/7, приходите днём или ночью.</p></div>
+      <div class="perk"><i>🎉</i><h3>Праздники</h3><p>Дни рождения, девичники, встречи друзей — до 20 человек.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="promo">
+  <div class="wrap">
+    <div class="promo">
+      <div>
+        <h2>Скидка в день рождения</h2>
+        <p>Покажите паспорт с датой рождения при покупке 4 часов — и получите ещё 1 час в подарок.</p>
+        <p>Акция действует и в течение 3 дней после дня рождения.</p>
+        <p style="margin-top:20px"><a class="btn" href="#book">Забронировать со скидкой</a></p>
+      </div>
+      <div class="gift">4 + 1<small>час в подарок</small></div>
+    </div>
+  </div>
+</section>
+
+<section id="book" style="background:var(--bg2)">
+  <div class="wrap book">
+    <div>
+      <h2>Бронирование</h2>
+      <p class="lead">Заполните форму — откроется WhatsApp с готовым сообщением. Нам останется подтвердить время.</p>
+      <p class="hint">Точную стоимость и свободные часы уточните у администратора.</p>
+    </div>
+    <form id="form" novalidate>
+      <label>Ваше имя<input id="name" required autocomplete="name" placeholder="Айбек"></label>
+      <label>Кабинка
+        <select id="cab">
+          <option>Sakura</option><option>Kiss</option><option>Skala</option><option>Mouse</option><option>Подскажите на месте</option>
+        </select>
+      </label>
+      <div class="row">
+        <label>Дата<input id="date" type="date" required></label>
+        <label>Время<input id="time" type="time" required></label>
+      </div>
+      <div class="row">
+        <label>Часов<select id="hours"><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>8</option></select></label>
+        <label>Гостей<input id="guests" type="number" min="1" max="20" value="2"></label>
+      </div>
+      <label>Пожелания<textarea id="note" rows="3" placeholder="День рождения, романтическое оформление, фильм…"></textarea></label>
+      <button class="btn" type="submit">Отправить в WhatsApp</button>
+      <p class="hint" id="msg" role="status"></p>
+    </form>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap" style="max-width:820px">
+    <h2>Частые вопросы</h2>
+    <details><summary>Сколько человек помещается в кабинку?</summary><p>До 20 человек. Для больших компаний лучше заранее написать нам в WhatsApp.</p></details>
+    <details><summary>Можно ли прийти ночью?</summary><p>Да, мы работаем 24/7.</p></details>
+    <details><summary>Как работает скидка в день рождения?</summary><p>Покажите паспорт, подтверждающий дату рождения, при покупке 4 часов и получите +1 час в подарок. Акция действует в день рождения и 3 дня после.</p></details>
+    <details><summary>Можно ли заказать романтическое оформление?</summary><p>Да. Напишите в пожеланиях при бронировании или сообщите администратору.</p></details>
+    <details><summary>Есть ли караоке?</summary><p>Да, у нас проходят караоке-вечера. Следите за анонсами в Instagram.</p></details>
+  </div>
+</section>
+
+<section id="contacts" style="background:var(--bg2)">
+  <div class="wrap contact">
+    <h2>Как нас найти</h2>
+    <a href="tel:+996503705705">+996 503 705 705</a>
+    <dl>
+      <div><dt>Адрес</dt><dd>Анкара 351 (Горького 59), Бишкек. Ориентир: Vefa.</dd></div>
+      <div><dt>Часы работы</dt><dd>Круглосуточно, 24/7</dd></div>
+      <div><dt>Соцсети</dt><dd><a style="display:inline;font:inherit;text-decoration:underline" href="https://www.instagram.com/mousehouse.bishkek" target="_blank" rel="noopener">Instagram @mousehouse.bishkek</a></dd></div>
+    </dl>
+    <p>
+      <a class="btn" style="display:inline-block;font:700 16px var(--body)" href="https://wa.me/996503705705" target="_blank" rel="noopener">Написать в WhatsApp</a>
+      <a class="btn ghost" style="display:inline-block;font:700 16px var(--body)" href="https://www.google.com/maps/search/?api=1&query=Анкара+351+Бишкек" target="_blank" rel="noopener">Открыть на карте</a>
+    </p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© Mouse House, Бишкек</span>
+    <span>Анкара 351 · +996 503 705 705</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var d=document.getElementById('date');
+  try{d.min=new Date().toISOString().slice(0,10);}catch(e){}
+  document.querySelectorAll('[data-cab]').forEach(function(a){
+    a.addEventListener('click',function(){document.getElementById('cab').value=a.dataset.cab;});
+  });
+  document.getElementById('form').addEventListener('submit',function(e){
+    e.preventDefault();
+    var g=function(id){return document.getElementById(id).value.trim();};
+    var msg=document.getElementById('msg');
+    if(!g('name')||!g('date')||!g('time')){msg.textContent='Укажите имя, дату и время.';return;}
+    var parts=g('date').split('-');
+    var text='Здравствуйте! Хочу забронировать кабинку в Mouse House.\n'+
+      'Имя: '+g('name')+'\nКабинка: '+g('cab')+'\nДата: '+parts[2]+'.'+parts[1]+'.'+parts[0]+
+      '\nВремя: '+g('time')+'\nЧасов: '+g('hours')+'\nГостей: '+g('guests')+
+      (g('note')?'\nПожелания: '+g('note'):'');
+    msg.textContent='Открываем WhatsApp…';
+    window.open('https://wa.me/996503705705?text='+encodeURIComponent(text),'_blank');
+  });
+})();
+</script>
+</body>
+</html>
